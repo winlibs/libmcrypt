@@ -36,8 +36,10 @@
 
 /* #define	NULL	0 */
 
-static void permute(), perminit(), spinit();
-static word32 f();
+static void permute(char *, char[16][16][8], char *);
+static void perminit(char[16][16][8], char[64]);
+static void spinit(TRIPLEDES_KEY *, int);
+static word32 f(TRIPLEDES_KEY *, int, register word32, register char *);
 
 
 /* Tables defined in the Data Encryption Standard documents */

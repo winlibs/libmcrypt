@@ -1,7 +1,7 @@
-#define rotl32(x,n)   (((x) << ((word32)(n))) | ((x) >> (32 - (word32)(n))))
-#define rotr32(x,n)   (((x) >> ((word32)(n))) | ((x) << (32 - (word32)(n))))
-#define rotl16(x,n)   (((x) << ((word16)(n))) | ((x) >> (16 - (word16)(n))))
-#define rotr16(x,n)   (((x) >> ((word16)(n))) | ((x) << (16 - (word16)(n))))
+#define rotl32(x,n)   (((x) << ((word32)(n & 31))) | ((x) >> (32 - (word32)(n & 31))))
+#define rotr32(x,n)   (((x) >> ((word32)(n & 31))) | ((x) << (32 - (word32)(n & 31))))
+#define rotl16(x,n)   (((x) << ((word16)(n & 15))) | ((x) >> (16 - (word16)(n & 15))))
+#define rotr16(x,n)   (((x) >> ((word16)(n & 15))) | ((x) << (16 - (word16)(n & 15))))
 
 /* Use hardware rotations.. when available */
 #ifdef swap32

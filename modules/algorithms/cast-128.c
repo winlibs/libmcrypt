@@ -7,7 +7,7 @@
  *	Released 1997.10.11
  */
 
-/* Adapted to the pike cryptographic toolkit by Niels Möller */
+/* Adapted to the pike cryptographic toolkit by Niels Mï¿½ller */
 
 /* modified in order to use the libmcrypt API by Nikos Mavroyanopoulos 
  * All modifications are placed under the license of libmcrypt.
@@ -317,7 +317,7 @@ WIN32DLL_DEFINE int _mcrypt_get_key_size()
 	return 16;
 }
 
-static const int key_sizes[] = { 16 };
+static const int key_sizes[] = { 5, 10, 16 };
 WIN32DLL_DEFINE const int *_mcrypt_get_supported_key_sizes(int *len)
 {
 	*len = sizeof(key_sizes)/sizeof(int);
